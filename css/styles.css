@@ -3,11 +3,15 @@
   --box: 10px 10px 10px #d1d9e6, -10px -10px 10px #f9f9f9;
   --bg-create: linear-gradient(-45deg, #e08106, #fbcd4f);
   --border: #ffab10;
-  --btn-login: linear-gradient(0deg, #93d53d, #7bb72d);
+  --btn-login: linear-gradient(45deg, #93d53d, #7bb72d);
   --bg-facebook: #3b5999;
   --bg-twitter: #55acee;
   --bg-google: #dd4b39;
   --bg-behance: #131418;
+  --bg-facebook-light: #355089;
+  --bg-twitter-light: #4c9ad6;
+  --bg-google-light: #c64333;
+  --bg-behance-light: #111216;
 }
 
 * {
@@ -42,17 +46,29 @@ a {
 .bg-fb {
   background: var(--bg-facebook);
 }
+.bg-fb-light {
+  background: var(--bg-facebook-light);
+}
 
 .bg-tw {
   background: var(--bg-twitter);
+}
+.bg-tw-light {
+  background: var(--bg-twitter-light);
 }
 
 .bg-g {
   background: var(--bg-google);
 }
+.bg-g-light {
+  background: var(--bg-google-light);
+}
 
 .bg-be {
   background: var(--bg-behance);
+}
+.bg-be-light {
+  background: var(--bg-behance-light);
 }
 
 /* containers */
@@ -67,6 +83,7 @@ a {
 
 .form-container {
   padding: 50px 0;
+  margin: 0 auto;
 }
 
 /* form box */
@@ -108,16 +125,10 @@ a {
   border-radius: 4px;
   width: 80%;
   margin: 10px auto;
-  padding: 6px;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.item a {
-  text-transform: capitalize;
-  color: #fff;
 }
 
 .item i {
@@ -126,8 +137,11 @@ a {
 }
 
 .item a {
+  text-transform: capitalize;
+  color: #fff;
   width: 80%;
   text-align: left;
+  margin: 0 auto 0 10px;
 }
 
 /* sign in section */
@@ -147,7 +161,7 @@ a {
 }
 
 .welcome {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -174,7 +188,6 @@ a {
   overflow: hidden;
   border: 1px solid var(--border);
   margin: 10px auto;
-  padding: 6px;
 }
 
 /* input */
@@ -216,7 +229,6 @@ i.fas {
   color: #fff;
   margin: 10px auto;
   cursor: pointer;
-  box-shadow: 0 0 14px #999;
 }
 
 .btn-submit {
@@ -226,14 +238,19 @@ i.fas {
   border: none;
   background: var(--btn-login);
   transition: all .2s ease;
+  box-shadow: 0 2px 2px #999;
 }
 
 @media (max-width: 767px) {}
 
-@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 768px) and (max-width: 991px) {
+  .form-container {
+    width: 90%;
+  }
+}
 
 @media (min-width: 992px) {
-  .form-box {
-    width: 80%;
+  .form-container {
+    width: 70%;
   }
 }
